@@ -1,0 +1,38 @@
+/* content.css — 悬浮「获取图片」按钮样式 */
+#img-grab-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 120px;
+  z-index: 2147483647;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1677ff 0%, #4096ff 100%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(22, 119, 255, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  user-select: none;
+}
+
+#img-grab-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(22, 119, 255, 0.45);
+}
+
+#img-grab-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(22, 119, 255, 0.35);
+}
+
+#img-grab-btn.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}

@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "电商图片提取下载",
+  "version": "1.0.0",
+  "description": "在淘宝、京东、拼多多商品详情页一键提取并批量下载商品图片（统一转为 PNG）",
+  "permissions": ["activeTab", "scripting", "downloads", "storage"],
+  "host_permissions": [
+    "*://*.taobao.com/*",
+    "*://taobao.com/*",
+    "*://*.tmall.com/*",
+    "*://tmall.com/*",
+    "*://*.jd.com/*",
+    "*://jd.com/*",
+    "*://*.pinduoduo.com/*",
+    "*://pinduoduo.com/*",
+    "*://*.yangkeduo.com/*",
+    "*://yangkeduo.com/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "电商图片提取下载"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.taobao.com/*",
+        "*://taobao.com/*",
+        "*://*.tmall.com/*",
+        "*://tmall.com/*",
+        "*://*.jd.com/*",
+        "*://jd.com/*",
+        "*://*.pinduoduo.com/*",
+        "*://pinduoduo.com/*",
+        "*://*.yangkeduo.com/*",
+        "*://yangkeduo.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

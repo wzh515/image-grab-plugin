@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>电商图片提取下载</title>
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+  <header class="toolbar">
+    <h1>商品图片</h1>
+    <div class="actions">
+      <span class="count">
+        共 <b id="totalCount">0</b> 张 · 已选 <b id="selectedCount">0</b> 张
+      </span>
+      <button id="selectAll" type="button">全选</button>
+      <button id="invert" type="button">反选</button>
+      <button id="download" type="button" class="primary">下载选中</button>
+    </div>
+  </header>
+
+  <div id="progress" class="progress hidden">
+    <div class="bar"><div id="progressBar" class="bar-fill"></div></div>
+    <span id="progressText"></span>
+  </div>
+
+  <div id="result" class="result hidden"></div>
+
+  <div id="grid" class="grid"></div>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
